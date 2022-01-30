@@ -6,7 +6,7 @@ const MUTATION_REGISTER_USER = gql`
     $email: String!
     $password: String!
     ) {
-        insert_user(object: {email: $email, password: $password}) {
+        insert_user(objects: {email: $email, password: $password}) {
             affected_rows
         }
     }
