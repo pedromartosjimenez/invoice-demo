@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@forrestjs/hooks": "^4.0.0",
+    "@forrestjs/react-root": "^0.3.0",
+    "@forrestjs/react-router": "^0.3.0"
+  }
+}

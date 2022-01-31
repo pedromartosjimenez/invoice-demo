@@ -28,10 +28,18 @@ services:
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_DEV_MODE: "true"
 
-  app:
+  # app:
+  #   build: 
+  #     context: ./app
+  #   ports:
+  #     - "${MULTI_PORT:-3000}:3000"
+  #   volumes:
+  #     - ./app:/usr/src/app:delegated
+
+  app-forrest:
     build: 
-      context: ./app
+      context: ./app-forrest
     ports:
-      - "${MULTI_PORT:-3000}:3000"
+      - "${MULTI_PORT:-3001}:3001"
     volumes:
-      - ./app:/usr/src/app:delegated
+      - ./app-forrest:/usr/src/app-forrest:delegated
